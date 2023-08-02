@@ -21,7 +21,7 @@
       </div>
 
       <div class="table-responsive">
-        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <table class="table table-bordered" id="sertifikasi" width="100%" cellspacing="0">
           <thead>
             <tr>
               <th>No</th>
@@ -53,8 +53,17 @@
       </div>
     </div>
   </div>
-
-
 </div>
+<script>
+  $(document).ready(function() {
+    $('#sertifikasi').DataTable({
+      select: true,
+      dom: 'Bfrtip',
+      buttons: [
+        'csv'
+      ]
+    })
+  })
+</script>
 <!-- /.container-fluid -->
 <?= $this->endSection() ?>

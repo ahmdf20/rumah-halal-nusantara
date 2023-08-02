@@ -27,7 +27,7 @@ class AuthController extends ResourceController
     {
         $validate = $this->validate([
             'email' => 'required',
-            'password' => 'required|min_length[6]'
+            'password' => 'required|min_length[4]'
         ]);
         if (!$validate) {
             $this->session->setFlashdata("alert", $this->validator->listErrors());

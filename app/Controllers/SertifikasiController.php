@@ -2,14 +2,20 @@
 
 namespace App\Controllers;
 
+use App\Models\User;
 use App\Models\Sertifikasi;
 use CodeIgniter\RESTful\ResourceController;
 
 class SertifikasiController extends ResourceController
 {
     protected $Sertifikasi;
+    protected $User;
+    protected $auth;
+
     public function __construct()
     {
+        $this->User = new User();
+        $this->auth = $this->User->where('email', session()->get('email'))->first();
         helper(['form']);
         $this->Sertifikasi = new Sertifikasi();
     }
@@ -19,7 +25,7 @@ class SertifikasiController extends ResourceController
      *
      * @return mixed
      */
-    public function index()
+    public function tambah()
     {
         return view('sertifikasi/tambah', [
             'title' => 'Tambah Data Sertifikasi',
@@ -31,6 +37,7 @@ class SertifikasiController extends ResourceController
         return view('sertifikasi/detail', [
             'title' => 'Detail Data Sertifikasi',
             'sertif' => $this->Sertifikasi->where('id', $id)->first(),
+            'auth' => $this->auth
         ]);
     }
 
@@ -39,10 +46,11 @@ class SertifikasiController extends ResourceController
         return view('sertifikasi/edit', [
             'title' => 'Tambah Data Sertifikasi',
             'sertif' => $this->Sertifikasi->where('id', $id)->first(),
+            'auth' => $this->auth
         ]);
     }
 
-    public function tambah()
+    public function store()
     {
         $validate = $this->validate([
             'nama_umkm' => 'required',

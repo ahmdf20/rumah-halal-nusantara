@@ -24,6 +24,15 @@
       <span>Dashboard</span></a>
   </li>
 
+  <?php if ($auth['email'] == 'admin@admin.com') :  ?>
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+      <a class="nav-link" href="/user">
+        <i class="fas fa-fw fa-users"></i>
+        <span>Admin</span></a>
+    </li>
+  <?php endif  ?>
+
   <!-- Nav Item - Dashboard -->
   <li class="nav-item">
     <a class="nav-link" href="/sertifikasi">
@@ -35,6 +44,13 @@
 
   <!-- Divider -->
   <hr class="sidebar-divider">
+
+  <!-- Nav Item - Dashboard -->
+  <li class="nav-item">
+    <a class="nav-link" href="/profile/<?= $auth['id'] ?>">
+      <i class="fas fa-fw fa-user-circle"></i>
+      <span>Profile</span></a>
+  </li>
 
   <!-- Sidebar Toggler (Sidebar) -->
   <div class="text-center d-none d-md-inline">

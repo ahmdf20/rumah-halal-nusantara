@@ -22,8 +22,8 @@ class Sertifikasi extends Migration
                 'type' => 'text',
             ],
             'kode_pos' => [
-                'type' => 'int',
-                'constraint' => 7,
+                'type' => 'varchar',
+                'constraint' => 50,
             ],
             'nama_produk' => [
                 'type' => 'varchar',

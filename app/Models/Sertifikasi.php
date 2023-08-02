@@ -13,7 +13,7 @@ class Sertifikasi extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama_umkm', 'alamat', 'kodepos', 'nama_produk', 'sertifikat', 'keterangan'];
+    protected $allowedFields    = ['nama_umkm', 'alamat', 'kode_pos', 'nama_produk', 'sertifikat', 'keterangan'];
 
     // Dates
     protected $useTimestamps = false;

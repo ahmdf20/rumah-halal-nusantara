@@ -19,9 +19,14 @@
   <link href="<?= base_url('sbadmin2/') ?>css/sb-admin-2.min.css" rel="stylesheet">
 
   <!-- Custom styles for this page -->
-  <link href="<?= base_url('sbadmin2/') ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
   <link rel="shortcut icon" href="<?= base_url('asset/brand/logo.jpg') ?>" type="image/x-icon">
+
+  <!-- DataTables -->
+  <link href="<?= base_url('sbadmin2/') ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <script src="<?= base_url('sbadmin2/') ?>vendor/jquery/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.bootstrap4.min.css">
+
+  <script src="<?= base_url('sbadmin2/vendor/chart.js/Chart.min.js') ?>"></script>
 
 </head>
 
@@ -70,7 +75,6 @@
 
 
   <!-- Bootstrap core JavaScript-->
-  <script src="<?= base_url('sbadmin2/') ?>vendor/jquery/jquery.min.js"></script>
   <script src="<?= base_url('sbadmin2/') ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
@@ -85,6 +89,17 @@
 
   <!-- Page level custom scripts -->
   <script src="<?= base_url('sbadmin2/') ?>js/demo/datatables-demo.js"></script>
+
+  <!-- Plugin -->
+  <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.bootstrap4.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script> -->
+  <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+  <!-- <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script> -->
+  <!-- Page level custom scripts -->
+  <!-- <script src="js/demo/chart-bar-demo.js"></script> -->
 
 </body>
 
